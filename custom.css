@@ -1,0 +1,28 @@
+/* #menubar-container, #jp-top-panel {
+  background: red;
+} */
+
+.checkpoint_status, .autosave_status,
+#menubar, #maintoolbar-container > .btn-group,
+#kernel_logo_widget, #login_widget, #cell_type,
+#tabs, #notebook_toolbar, #notebook_list_header {
+  display: none;
+}
+
+/* #header-container {
+  float: left;
+}
+#menubar-container {
+  float: right;
+}
+
+.lower-header-bar {
+  clear: both;
+} */
+
+#run_int, #run_all_cells {
+  display: block !important;
+}
+#run_int button:not(:first-child) {
+  display: none;
+}
