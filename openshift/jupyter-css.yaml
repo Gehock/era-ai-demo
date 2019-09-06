@@ -59,7 +59,7 @@ metadata:
   creationTimestamp: 2019-07-17T13:57:56Z
   labels:
     app: jupyter2
-  name: jupyter-css
+  name: jupyter2-css
   namespace: era-ai-demo
   resourceVersion: "288937497"
   selfLink: /api/v1/namespaces/era-ai-demo/configmaps/jupyter-css
