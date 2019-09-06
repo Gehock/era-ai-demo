@@ -1,3 +1,6 @@
 [submodule "notebook"]
 	path = notebook
 	url = git@github.com:Gehock/era-ai-demo.git
+[submodule "ui-test"]
+	path = ui-test
+	url = /m/home/home4/42/laines5/unix/git/ui-test
