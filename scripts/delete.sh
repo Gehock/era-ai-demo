@@ -1,7 +1,7 @@
 #!/bin/sh
-oc delete all --selector app=jupyter2
-oc delete configmaps jupyter2-cfg
-oc delete configmaps jupyter2-css
-oc delete serviceaccounts jupyter2-hub
-oc delete rolebindings.authorization.openshift.io jupyter2-edit
-oc delete persistentvolumeclaims jupyter2-db
+oc delete all --selector app=jupyter
+oc delete configmaps jupyter-cfg
+oc delete configmaps jupyter-css
+oc delete serviceaccounts jupyter-hub
+oc delete rolebindings.authorization.openshift.io jupyter-edit
+oc delete persistentvolumeclaims jupyter-db
