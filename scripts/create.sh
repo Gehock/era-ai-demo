@@ -2,5 +2,9 @@
 oc new-app \
   --template jupyterhub-quickstart \
   --param APPLICATION_NAME=jupyter2 \
-  --param GIT_REPOSITORY_URL=https://github.com/Gehock/era-ai-demo \
+  --param GIT_REPOSITORY_URL=https://github.com/Gehock/era-ai-demo-notebook \
   --param BUILDER_IMAGE=s2i-minimal-notebook:3.6
+oc create -f ../openshift/jupyter-css.yaml
+# The builder creates an empty cfg
+oc delete configmap jupyter2-cfg
+oc create -f ../openshift/jupyter-cfg.yaml
