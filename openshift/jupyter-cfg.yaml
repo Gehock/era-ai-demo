@@ -1,0 +1,42 @@
+apiVersion: v1
+data:
+  jupyterhub_config.py: |
+    c.KubeSpawner.default_url = '/notebooks/Computer-Assignment-B.ipynb'
+    c.KubeSpawner.mem_guarantee = '512M'
+    c.KubeSpawner.mem_limit = '1024M'
+    c.JupyterHub.cleanup_servers = False
+
+    c.KubeSpawner.environment = {
+        'JUPYTER_CONFIG_DIR': '/opt/app-root/jupyter'
+    }
+    c.KubeSpawner.extra_pod_config = {
+      'volumes': [
+        {
+          'configMap': {
+            'defaultMode': 420,
+            'name': 'jupyter-css'
+          },
+          'name': 'css'
+        },
+      ]
+    }
+    c.KubeSpawner.extra_container_config = {
+      'volumeMounts': [
+        {
+          'name': 'css',
+          'mountPath': '/opt/app-root/jupyter/custom'
+        },
+      ]
+    }
+kind: ConfigMap
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: 2019-09-04T12:12:22Z
+  labels:
+    app: jupyter2
+  name: jupyter-cfg
+  namespace: era-ai-demo
+  resourceVersion: "288930747"
+  selfLink: /api/v1/namespaces/era-ai-demo/configmaps/jupyter-cfg
+  uid: 3fda78a9-cf0d-11e9-a896-fa163e081ad5
