@@ -1,4 +1,4 @@
-c.KubeSpawner.default_url = '/notebooks/notebooks/00.00-Preface.ipynb'
+c.KubeSpawner.default_url = '/notebooks/Computer-Assignment-B.ipynb'
 c.KubeSpawner.mem_guarantee = '512M'
 c.KubeSpawner.mem_limit = '1024M'
 c.JupyterHub.cleanup_servers = False
