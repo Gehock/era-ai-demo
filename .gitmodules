@@ -1,5 +1,5 @@
 [submodule "notebook"]
-	path = notebook
+	path = era-ai-demo-notebook
 	url = git@github.com:Gehock/era-ai-demo-notebook.git
 [submodule "ui-test"]
 	path = ui-test
