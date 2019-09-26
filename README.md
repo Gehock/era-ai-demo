@@ -2,9 +2,10 @@ ERA conference AI demo
 ===
 
 This repository follows the Jupyter on Openshift [quickstart guide][1].
-The repository uses modified [s2i builder images][2].
 
-The notebook can be found [here][3].
+The repository uses modified [s2i builder images][2] based on the
+[Jupyter Notebooks for OpenShift][3] repository. The notebook can be
+found [here][4]. HTTPS certificates are handled with [openshift-acme][5].
 
 How to use
 ---
@@ -19,9 +20,17 @@ oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyterhub-qu
 Run following commands to create the deployment
 ```
 cd scripts
-sh ./create.sh
+./create-deployment.sh
+```
+Run following commands to create the custom route
+```
+cd scripts
+./setup-acme.sh
+./create-route.sh
 ```
 
 [1]: https://github.com/jupyter-on-openshift/jupyterhub-quickstart
 [2]: https://github.com/Gehock/jupyter-notebooks
-[3]: https://github.com/Gehock/era-ai-demo-notebook
+[3]: https://github.com/jupyter-on-openshift/jupyter-notebooks
+[4]: https://github.com/Gehock/era-ai-demo-notebook
+[5]: https://github.com/tnozicka/openshift-acme
